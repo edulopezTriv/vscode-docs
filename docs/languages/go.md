@@ -77,8 +77,17 @@ The errors and warnings from running any/all of the above will be shown red/gree
 
 You can format your Go file using `kb(editor.action.formatDocument)` or by running the **Format Document** command from the **Command Palette** or the context menu in the editor.
 
-By default, formatting is run when you save your Go file. You can disable this behavior by setting `go.formatOnSave` to `false`.
+By default, formatting is run when you save your Go file. You can disable this behavior by setting `editor.formatOnSave` to `false` for the [Go] language.
 
+```
+"[go]":  {
+		"editor.insertSpaces": false,
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+				"source.organizeImports": true
+		}
+	}
+```  
 You can choose among three formatting tools: `gofmt`, `goreturns` and `goimports` by changing the setting `go.formatTool`.
 
 ## Test
